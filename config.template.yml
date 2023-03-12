@@ -1,0 +1,10 @@
+HARDWARE: "LX05A"           # 你的小爱音箱设备型号（贴在小爱音箱底部）
+
+MI_USER: "YOUR_MI_ACCOUNT"  # 你的米家账号
+MI_PASS: "YOUR_MI_PASSWD"    # 你的米家密码
+
+WUKONG_HOST: '127.0.0.1'  # wukong-robot 的服务地址
+WUKONG_PORT: '5001'         # wukong-robot 的端口号
+WUKONG_VALIDATE: "f4bde2a342c7c75aa276f78b26cfbd8a"  # 你的 wukong-robot validate
+
+KEY_WORD: "问下悟空"         # 小爱联动wukong的触发词
