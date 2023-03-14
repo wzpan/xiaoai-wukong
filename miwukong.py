@@ -217,7 +217,7 @@ class MiWukong:
                     # we try to init all again
                     await self.init_all_data(session)
                     r = await self.get_latest_ask_from_xiaoai()
-                    
+
                 new_timestamp, last_record = self.get_last_timestamp_and_record(r)
                 if new_timestamp > self.last_timestamp and int(time.time())*1000 - int(new_timestamp) < 5000:
                     self.last_timestamp = new_timestamp
@@ -227,7 +227,7 @@ class MiWukong:
                         query = query.replace(self.keyword, "")
                         query = f"{query}"
                         # waiting for xiaoai speaker done
-                        await self.do_tts("正在问 wukong-robot 请耐心等待")
+                        print("正在问 wukong-robot")                        
                         try:
                             print(
                                 "以下是小爱的回答: ",
@@ -237,6 +237,7 @@ class MiWukong:
                             )
                         except:
                             print("小爱没回")
+                        await self.do_tts(" ")
                         await self.ask_wukong(query, session)
                 else:
                     if self.verbose:
